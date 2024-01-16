@@ -34,6 +34,22 @@ A notação Big O(n) nos fornece um comparativo de número de operações, para 
 4. O (n²) Exemplo: um algoritmo lento de ordenação, como ordenação por seleção.
 5. O (n!) Exemplo: um algoritmo bastante lento, como o de caixeiro viajante. pois se trata de um problema sem solução, apenas podendo chegar a uma solução aproximada.
 
-Neste ponto podemos entender qye um algoritmo não é medido em segundos, mas pelo crescimento do número de operações e o tempo de execução é expresso na notação Big O.
+Neste ponto podemos entender que um algoritmo não é medido em segundos, mas pelo crescimento do número de operações e o tempo de execução é expresso na notação Big O.
+
+---
+## **Capítulo 02 - Ordenação por seleção**
+
+* **Arrays**:
+> Usar um array significa que todas as suas tarefas estão armazenadas contiguamente (um ao lado da outra) na memória.
+
+> Arrays são ótimos se você deseja ler elementos aleatórios, pois pode encontrar qualquer elemento instantaneamente em um array.
+
+Pensando nessa perspectiva, por arrays sendo estruturas que guardam os dados e organiza os mesmos. 
+
+* **Listas encadeadas**:
+
+> Listas encadeadas são ótimas se você quiser ler todos os itens, um de cada vez: você pode ler um item, seguir para o endereçodo próximo item e fazer isso até o fim da lista.
+
+Enquanto arrays partem do processo de poder acessar um índice aleatório, listas encadeadas partem da representação de sequência de objetos de um determinado tipo na memória. Logo, se necessário acessar determinado índice, ele irá passar por todos os objetos da sequência para isso.  A utilização de array ou lista encadeada depende do contexto de sua utilização.  Se partir de algo específico que precisa ser acessado, array se torna uma melhor resposta para isso, mas caso seja necessário a organização de uma lista que necessita de uma sequência, como nomes de pessoas com seus respectivos dados, é interessante utilizar uma lista encadeada.
 
 

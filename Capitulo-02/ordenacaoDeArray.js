@@ -10,3 +10,14 @@ function buscaMenor(arr){
     return menor_indice;
 }
 console.log(buscaMenor([8,10, 9, 10, 20]));
+
+function ordenacaoPorSelecao(arr){
+    let novoArr = [];
+    while (arr.length > 0) {
+        let menor = buscaMenor(arr);
+        novoArr.push(arr.splice(menor, 1)[0]);
+    }
+    return novoArr;
+}
+
+console.log(ordenacaoPorSelecao([5, 3, 6, 2, 10]));

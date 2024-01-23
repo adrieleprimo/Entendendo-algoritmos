@@ -76,3 +76,19 @@ Enquanto arrays partem do processo de poder acessar um índice aleatório, lista
 > A pilha de chamada pode ficar muito grande e ocupar muita memória.
 
 Em recursão temos um entendimento melhor sobre o que seria recursão, algo que utilizamos muito durante o aprendizado sobre lógica de programação. Neste processo, o entendimento sobre pilha de chamada e em como é utilizado na própria recursão. Essa compreensão parte do funcionamento da execução dessa pilha, que não se tem montes e esse monte é salvo na pilha. No entanto, utilizar pilha apesar de ser algo bom, exige um custo muito alto de memória.
+
+## Capítulo 04 - Quicksort
+
+> Técnica recursiva chamada **Dividir para conquistar** (DC). A cada recursão, você reduz o seu problema.
+
+Técnica DC é uma maneira pensar sobre o problema.
+
+> Primeiro passo é encontrar o caso-base, o array mais simples, que pode ser um array[0] ou array[1], ou seja, um array vazio ou com um elemento. Com isso você tende a chegar mais perto desse array vazio a cada realização da recursão.
+
+Neste caso, a técnica DC é basicamente uma forma de redução do array, ou seja, reduzindo o tamanho do problema em partes menores. Com isso, você consegue ter uma melhor resolução dos problemas apresentados. A recursão por ter memória dos estados anteriores, ocasiona nesse processo para chegar no caso-base.
+
+> **Quicksort** é um algortimo de ordenaçãoe utiliza a estratégia DC.
+
+> Escolha um elemento do array que será intitulado como pivô. Isso é chamado de particionamento. No qual, através do pivô teremos subarrays contendo os números que são maiores do que o pivô e os que são menores que o pivô. 
+
+Durante o processo de particionamento desses subarrays, nós temos a execução do quicksort com recursão. Deste modo, no processo de ordenação, nós chamamos a própria função. Portanto, independente da posição, ao chamarmos esse pivô, ocorrerá a ordenção dos elementos.

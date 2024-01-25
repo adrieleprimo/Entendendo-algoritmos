@@ -91,4 +91,24 @@ Neste caso, a técnica DC é basicamente uma forma de redução do array, ou sej
 
 > Escolha um elemento do array que será intitulado como pivô. Isso é chamado de particionamento. No qual, através do pivô teremos subarrays contendo os números que são maiores do que o pivô e os que são menores que o pivô. 
 
-Durante o processo de particionamento desses subarrays, nós temos a execução do quicksort com recursão. Deste modo, no processo de ordenação, nós chamamos a própria função. Portanto, independente da posição, ao chamarmos esse pivô, ocorrerá a ordenção dos elementos.
+Durante o processo de particionamento desses subarrays, nós temos a execução do quicksort com recursão. Deste modo, no processo de ordenação, nós chamamos a própria função. Portanto, independente da posição, ao chamarmos esse pivô, ocorrerá a ordenção e combinação dos elementos.
+
+> Algoritmo quicksort é único, pois sua velocidade depende do pivô escolhido.
+
+> Na pior situação, o quicksort tem tempo de execução O(n2).
+
+> Ele é tão lento quanto a ordenação por seleção. Porém, este é o pior caso possível. No caso médio, o quicksort tem tempo de execução O(n log n).
+
+> Quando você escreve algo na notação Big O, como O(n), por exemplo,está querendo dizer isso: **c** (alguma quantidade determinada de tempo) * n. Letra **c** é uma quantidade determinada de tempo que o seu algoritmo leva para ser executado. Ela é chamada de **constante**.
+
+> Caso dois algortimos tenham tempos de execução Big O diferentes, a constante não importará. Porém, às vezes pode fazer **diferença**, como no caso do quicksort e do mergesort, no qual ambos tem tempo de execução O(n log n), mas o quicksort acaba sendo mais rápido e o fator que torna-o mais rápido é funcionar mais vezes no caso médio do que no pior caso.
+
+> O desempenho do quicksort depende muito da escolha do pivô.
+
+> Ao dividir o array pela metade, você não necessita de realizar tantas execuções recursivas. Assim, chega de maneira mais breve ao caso-base e a pilha de chamada.
+
+> No pior caso, o tamanho da pilha é O(n) e no melo caso, o tamanho da pilha é O(log n). Acontece pois você pode obter o melhor caso de forma consitente, contanto que você sempre escolha um elemento aleatório como o pivô.
+
+> Lembrando que mesmo ao particionar a array de forma diferente, continuará passando por O(n) elementos de cada execução.
+
+> Se você sempre escolher um elemento aleatório do array como pivô, o quicksort será completado com tempo de execução médio O(n log n).

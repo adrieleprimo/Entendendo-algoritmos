@@ -101,7 +101,7 @@ Durante o processo de particionamento desses subarrays, nós temos a execução 
 
 > Quando você escreve algo na notação Big O, como O(n), por exemplo,está querendo dizer isso: **c** (alguma quantidade determinada de tempo) * n. Letra **c** é uma quantidade determinada de tempo que o seu algoritmo leva para ser executado. Ela é chamada de **constante**.
 
-> Caso dois algortimos tenham tempos de execução Big O diferentes, a constante não importará. Porém, às vezes pode fazer **diferença**, como no caso do quicksort e do mergesort, no qual ambos tem tempo de execução O(n log n), mas o quicksort acaba sendo mais rápido e o fator que torna-o mais rápido é funcionar mais vezes no caso médio do que no pior caso.
+> Caso dois algoritmos tenham tempos de execução Big O diferentes, a constante não importará. Porém, às vezes pode fazer **diferença**, como no caso do quicksort e do mergesort, no qual ambos tem tempo de execução O(n log n), mas o quicksort acaba sendo mais rápido e o fator que torna-o mais rápido é funcionar mais vezes no caso médio do que no pior caso.
 
 > O desempenho do quicksort depende muito da escolha do pivô.
 
@@ -112,3 +112,74 @@ Durante o processo de particionamento desses subarrays, nós temos a execução 
 > Lembrando que mesmo ao particionar a array de forma diferente, continuará passando por O(n) elementos de cada execução.
 
 > Se você sempre escolher um elemento aleatório do array como pivô, o quicksort será completado com tempo de execução médio O(n log n).
+
+
+## Capítulo 05 - Tabelas Hash
+
+> Uma função hash é uma função na qual você insere uma string e, depois disso, a função retorna um número. Em outras palavras, a função hash "mapeia strings e números".
+
+> A função necessita de alguns requisitos, como ser consistente, ou seja, se for inserido um string, como no caso de "maçã", toda vez em que for solicitado, deverá retornar sempre o valor dela. Isso torna a função consistente. Além disso, deve mapear diferentes álavras para diferentes números, com isso evitar as colisões.
+
+> É importante ressaltar que a função hash tem conhecimento sobre o tamanho do seu array e retornará apenas índices válidos. 
+
+> Uma tabela hash contém chaves e valores.
+
+> Importante ressaltar que até mesmo os endereços de website para um endereço IP pode ser aplicado com a utilização de tabelas hash, conhecido como **resolução DNS**.
+
+Um importante momento deste capítulo é quando o autor traz sobre a utilização das tabelas hash como cache, ou seja, ao invés de sempre realizar uma solicitação nova, os websites memorizam esses dados.
+O método chamado de **caching** é uma forma de agilizar todo o processo. Pois caso você esteja logado sera solicitado os conteúdos daquela página da web, caso não esteja logado, apenas será mostrado o login, como é feito em alguns websites como X, Facebook etc. Além de ser considerada uma boa prática.
+
+A utilidade das tabelas hash:
+
+- Modelar relações entre dois itens;
+- Filtrar por duplicatas;
+- Caching/memorização de dados, em vez de solicitar estes dados do servidor.
+
+> As duplicatas seriam o que chamamos de colisão, quando duas chaves são indicadas para o mesmo espaço e isto é um problema que pode impactar no desempenho.
+
+> As funções hash são importantes, pois uma boa função hash cria poucas colisões.
+
+> As tabelas hash têm tempo de execução O(1) para tudo. Assim, O(1) é chamado de **tempo constante**.
+
+> Tempo constante não é algo que acontece instantaneamente, mas sim um tempo que continuará sempre o mesmo, independentemente de quão grande a tabela hash pode ficar.
+
+> Para evitar colisões são necessários:
+
+ - Um baixo fator de carga;
+ - Uma boa função hash.
+
+ > Uma boa função hash distribui os valores no array simetricamente.
+
+ > Uma função hash não ideal agrupa valores e produz diversas colisões.
+
+ > As tabelas hash são extremamente rápidas para pesquisar, inserir e remover itens.
+
+## Capítulo 06 - Pesquisa em largura
+
+> A pesquisa em largura permite encontrar o menor caminho entre dois objetos.
+
+### O que são grafos?
+
+> Um modelo de grafo é um conjunto de conexões.
+Grafos são formados por vértices e arestas, e um vértice pode ser diretamente conectado a muitos outros vértices, por isso chamamos de *vizinhos*.
+Logo, os grafos são uma maneira de modelar como eventos diferentes estão conectados entre si.
+
+### Filas
+
+> Uma fila em estrutura de dados funciona exatamente como uma fila da vida real. As filas funcionam da mesma maneira, tendo como funcionamento similar ao das pilhas. Por isso não é possível acessar elementos aleatórios em uma fila. Em vez disso, apenas duas operações são possíveis: *enqueue*(enfileirar) e *dequeue*(desenfileirar).
+
+>  A fila é uma estrutura de dados FIFO(acrônimo para First In, First Out). Já a pilha é uma estrutura de dados LIFO(Last In. First Out).
+
+### Implementando o grafo
+
+> Como expressar essas realções de acordo com vértice? usando *tabela hash*. A tabela hash lhe permite mapear uma chave a um valor.
+
+grafo = {}  
+grafo['voce'] = ['alice', 'bob', 'claire'];
+
+> Além disso, não faz diferença a ordem de adição dos papres chave/valor, pois tabelas hash não são ordenadas.
+
+Existem dois tipos de grafos:
+
+* *Dígrafo* (ou grafo direcionado): No qual a relação só acontece apenas em um sentido.
+* Grafo não direcionado (ou simplesmente grafo): não contém setas, e ambos os vértices são vizinhos um do outro.

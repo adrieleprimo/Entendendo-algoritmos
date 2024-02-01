@@ -6,9 +6,8 @@ function pessoa_e_vendedor(nome){
     let nomeString = String(nome);
     if(nomeString.endsWith('m')){
         return nomeString;
-    }
-    return '';
-    
+    }   
+    return false;
 }
 
 function pesquisa(nome){
@@ -32,4 +31,3 @@ function pesquisa(nome){
 }
 
 console.log(pesquisa('claire'));
-

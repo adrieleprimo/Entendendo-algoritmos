@@ -183,3 +183,11 @@ Existem dois tipos de grafos:
 
 * *Dígrafo* (ou grafo direcionado): No qual a relação só acontece apenas em um sentido.
 * Grafo não direcionado (ou simplesmente grafo): não contém setas, e ambos os vértices são vizinhos um do outro.
+
+### Tempo de execução
+
+>Adicionar uma pessoa à lista leva um tempo constante: O(1). Fazer isso para cada pessoa terá tempo de execução O(número de pessoas) no total. Assim, a pesquisa em largura tem tempo de execução O(número de pessoas + número de arestas), que é frequentemente escrito como O(V+A)(V para números de vértices, A para números de arestas).
+
+> *Ordenação topológica* é uma maneira de criar uma lista ordenada a partir de um grafo.
+
+> Uma *arvóre* é um tipo especial de grafo em que nenhuma aresta jamais aponta de volta. Ex: Arvóre geneológica.

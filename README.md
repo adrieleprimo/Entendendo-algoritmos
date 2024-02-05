@@ -191,3 +191,29 @@ Existem dois tipos de grafos:
 > *Ordenação topológica* é uma maneira de criar uma lista ordenada a partir de um grafo.
 
 > Uma *arvóre* é um tipo especial de grafo em que nenhuma aresta jamais aponta de volta. Ex: Arvóre geneológica.
+
+## Capítulo 07 - Algoritmo de Dijkstra
+
+### Trabalhando com  o algoritmo de Dijkstra
+
+> O algoritmo de Dijkstra tem quatro etapas:
+> 1. Encontrar o vértice mais "barato". Este é o vértice em que você consegue chegar no menor tempo possível.
+> 2. Atualizar o custo dos vizinhos desse vértice.
+> 3. Repita até que você tenha feito isso para cada vértice do grafo.
+> 4. Calcule o caminho final.
+
+> Em Dijkstra você atribui um peso a cada segmento.
+
+Diferente da pesquisa em largura, no qual se tem o "caminho mínimo", ou seja, o caminho parte da menor quantidade de segmentos. Nisso, temos uma diferença em algoritmo de Dijkstra, onde vamos atribuindo um peso, no caso um valor, que "vence" o caminho com menor peso no total".
+
+### Terminologias
+
+> Quando você trabalha com o algoritmo de Dijkstra, cada aresta do grafo tem um número associado a ela. Eles são chamados de *pesos*.
+
+> Um grafo com pesos é chamado de *grafo ponderado* (também chamado de grafo valorado). Um grafo sem pesos é chamado de *grafo não ponderado* (também chamado de grafo não valorado).
+
+> Para calcular o caminho mínimo em um grafo não ponderado, utilize a pesquisa em largura. Já para calcular o caminho mínimo em um grafo ponderado utilize o algoritmo de Dijkstra.
+
+> Ciclos indicam que é possível começar em um vértice, viajar ao redor dele e terminar no mesmo vértice.
+
+> Um grafo não direcionado indica que dois vértices podem apontar um para o outro. Ou seja, um grafo não direcionado é um ciclo. Com um grafo não direcionado, cada vértice adiciona um novo ciclo.

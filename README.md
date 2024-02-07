@@ -206,7 +206,7 @@ Existem dois tipos de grafos:
 
 Diferente da pesquisa em largura, no qual se tem o "caminho mínimo", ou seja, o caminho parte da menor quantidade de segmentos. Nisso, temos uma diferença em algoritmo de Dijkstra, onde vamos atribuindo um peso, no caso um valor, que "vence" o caminho com menor peso no total".
 
-### Terminologias
+### Terminologia
 
 > Quando você trabalha com o algoritmo de Dijkstra, cada aresta do grafo tem um número associado a ela. Eles são chamados de *pesos*.
 
@@ -216,4 +216,24 @@ Diferente da pesquisa em largura, no qual se tem o "caminho mínimo", ou seja, o
 
 > Ciclos indicam que é possível começar em um vértice, viajar ao redor dele e terminar no mesmo vértice.
 
+> Seguir o ciclo jamais fornecerá o caminho mínimo.
+
 > Um grafo não direcionado indica que dois vértices podem apontar um para o outro. Ou seja, um grafo não direcionado é um ciclo. Com um grafo não direcionado, cada vértice adiciona um novo ciclo.
+
+### Adquirindo piano
+
+> *Olhe para o vértice mais barato do seu gráfico: não há uma maneira mais barata de chegar até ele*.
+
+> O caminho mínimo não precisa ser somente uma distância física, mas que ele também envolve como reduzir algo.
+
+### Arestas com peso negativo
+
+> *Vocẽ não pode usar o algoritmo de Dijkstra se você tiver arestas com peso negativo*
+
+> Uma vez que um vértice é processado, isso significa que não há uma maneira mais barata de chegar até ele.
+
+> Se quiser encontrar o caminho mínimo em um grafo contendo arestas com pesos negativos, existe um algoritmo específico para isso! Ele é chamado de algoritmo de *Bellman-Ford*.
+
+### Implementação
+
+> O custo de um vértice é a quantia necessária para chegar, a partir do Início, no vértice em questão.

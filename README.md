@@ -220,6 +220,9 @@ Diferente da pesquisa em largura, no qual se tem o "caminho mínimo", ou seja, o
 
 > Um grafo não direcionado indica que dois vértices podem apontar um para o outro. Ou seja, um grafo não direcionado é um ciclo. Com um grafo não direcionado, cada vértice adiciona um novo ciclo.
 
+> O algoritmo de Dijkstra só funciona em gráficos sem ciclos ou em gráficos com um ciclo de peso positivo. 
+
+
 ### Adquirindo piano
 
 > *Olhe para o vértice mais barato do seu gráfico: não há uma maneira mais barata de chegar até ele*.
